@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FinalProject</name>
+    </assembly>
+    <members>
+        <member name="M:FinalProject.Controllers.EventsController.GetAllEvents">
+            <summary>
+            Gets the list of all Events
+            </summary>
+            <returns>The list of Events</returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.GetEventById(System.Int32)">
+            <summary>
+            Gets Events by its ID
+            </summary>
+            <param name="id"></param>
+            <returns>Event by id</returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.CreateCommand(FinalProject.Models.Event)">
+            <summary>
+            Creates new Event.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST api/event
+                {
+                    "eventName": "Vakaro sokiai",
+                    "eventDescription": "aprasymas apie sokius su kazkuo ir kazkur",
+                    "eventDate": "2020-06-20",
+                    "streetLocation": "Jurbarkiniu g. 12", Vilnius
+                }
+                
+            </remarks>
+            <param name="newEvent"></param> 
+            <returns>Created Event</returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.UpdateEvent(System.Int32,FinalProject.Models.Event)">
+            <summary>
+            Updates new Event.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT api/event
+                {
+                    "eventName": "Vakaro sokiai",
+                    "eventDescription": "aprasymas apie sokius su kazkuo ir kazkur",
+                    "eventDate": "2020-06-20",
+                    "streetLocation": "Jurbarkiniu g. 12", Vilnius
+                }
+                
+            </remarks>
+            <param EventId="id"></param> 
+            <param name="updatedEvent"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.DeleteEvent(System.Int32)">
+            <summary>
+            Deletes Event by its ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.GetEventAttendants(System.Int32)">
+            <summary>
+            Gets Events with participants by its ID
+            </summary>
+            <param name="id"></param>
+            <returns>Event with participants by id</returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.AddParticipant(System.Int32,System.Int32)">
+            <summary>
+            Adds new parcipant to event by thier IDs.
+            </summary>
+            <param eventId="Event ID"></param> 
+            <param personId="Person ID"></param> 
+            <returns>Added person to Event</returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.DeletePaticipant(System.Int32,System.Int32)">
+            <summary>
+            Deletes Event participant by its ID
+            </summary>
+            <param eventId="Event ID"></param> 
+            <param personId="Person ID"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.GetAllPeeps">
+            <summary>
+            Gets the list of all People
+            </summary>
+            <returns>The list of People</returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.GetPersonById(System.Int32)">
+            <summary>
+            Gets Person by its ID
+            </summary>
+            <param id="PersonId"></param>
+            <returns>Person by id</returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.CreatePerson(FinalProject.Models.Person)">
+            <summary>
+            Creates new Person.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST api/event/people
+                {
+                    "name": "Tomas",
+                    "lastName": "Kaviaras",
+                    "phoneNumber": 8625685411,
+                }
+                
+            </remarks>
+            <param name="newPerson"></param> 
+            <returns>Created Person</returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.UpdatePerson(System.Int32,FinalProject.Models.Person)">
+            <summary>
+            Updates new Person.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT api/event/people/{Id}
+                {
+                    "name": "Tomas",
+                    "lastName": "Kaviaras",
+                    "phoneNumber": 8625685411,
+                }
+                
+            </remarks>
+            <param id="PersonId"></param> 
+            <param name="updatedPerson"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:FinalProject.Controllers.EventsController.DeletePerson(System.Int32)">
+            <summary>
+            Deletes Person by its ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
